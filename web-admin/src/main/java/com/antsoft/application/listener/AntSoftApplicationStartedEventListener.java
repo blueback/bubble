@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.context.event.ApplicationStartedEvent;
+import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.ApplicationListener;
 
 /**
@@ -17,5 +18,6 @@ public class AntSoftApplicationStartedEventListener implements ApplicationListen
     @Override
     public void onApplicationEvent(ApplicationStartedEvent applicationStartedEvent) {
 //        SpringApplication app = applicationStartedEvent.getSpringApplication();
+        logger.info("1111");
     }
 }
