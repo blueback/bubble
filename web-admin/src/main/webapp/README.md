@@ -1,28 +1,62 @@
-## React Ant.Design Admin UI
-
-## Features
-
-- [React](https://facebook.github.io/react/)
-- [Redux](https://github.com/reactjs/redux)
-- [Ant.Design](http://ant.design/)
-- [Babel](https://babeljs.io/)
-- [webpack](https://webpack.github.io/)
-- [mocha](https://mochajs.org/)
-- [enzyme](https://github.com/airbnb/enzyme)
+## Feature List
+- hot reloading/browser-sync/redux devtools on dev build
+![](http://ww1.sinaimg.cn/large/785cd1e3gw1f69xb4vta2g20tb0fs7c5.gif)
+- minify/chunkhash/trackJS on production build
+![](http://ww4.sinaimg.cn/large/785cd1e3gw1f69xey2om7g20tb0fs1kx.gif)
+- eslint both of terminal and pre-commit
+![](http://ww1.sinaimg.cn/large/785cd1e3gw1f69xiq41uog20tb0fsn8e.gif)
+![](http://ww2.sinaimg.cn/large/785cd1e3gw1f69zn0p20gj21je0jan1f.jpg)
+- unit test of react/redux
+![](http://ww3.sinaimg.cn/large/785cd1e3gw1f69x6lccmij21020m2juk.jpg)
+![](http://ww2.sinaimg.cn/large/785cd1e3gw1f69zp1v97ij21kw0u8td8.jpg)
+- es6/webapck
+- sass support
+- UI Kit: Ant Design
+- isomorphic-fetch
+- mock data
+- example app
+- ...
 
 ## Getting Started
+### install
+```
+git clone git@github.com:Justin-lu/react-redux-best-practice.git demo
+cd demo
+npm install
 
-Just clone the repo and install the necessary node modules:
-
-```shell
-$ git clone https://github.com/fireyy/react-antd-admin
-$ cd react-antd-admin
-$ npm install
-$ npm start
+# run dev
+npm run start
+# run mock server
+npm run start:mock
 ```
 
-## Run test spec
+### npm script
 
 ```shell
-$ npm run test
+# dev start with test/lint
+npm run start 
+
+# prodction start with browser-sync server
+npm run start:prod
+
+# production build
+npm run build
+
+# mock data
+npm run start:mock
+
+# run test
+npm run test
+
+# generate test cover report
+npm run test:cover
+
+```
+
+### eslint
+
+- enable pre-commit hook
+
+```shell
+cd .git/hooks/ && ln -s ./../../tools/pre-commit pre-commit
 ```
