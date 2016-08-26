@@ -11,7 +11,7 @@ import Home from './views/Home';
 import Login from './views/Login';
 
 import {getCookie} from './utils';
-
+import './index.css';
 const history = useRouterHistory(createHistory)({ basename: '' })
 const store = configureStore();
 
@@ -19,7 +19,7 @@ const validate = function (next, replace, callback) {
   const isLoggedIn = !!getCookie('uid')
   if (!isLoggedIn && next.location.pathname != '/login') {
     replace('/login')
-  }
+  }  
   callback()
 }
 

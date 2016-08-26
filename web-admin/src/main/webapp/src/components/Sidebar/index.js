@@ -7,7 +7,6 @@ import { getAllMenu, updateNavPath } from '../../actions/menu'
 
 const SubMenu = Menu.SubMenu
 
-import './index.less'
 
 const defaultProps = {
   items: [],
@@ -54,9 +53,10 @@ class Sidebar extends React.Component {
     });
     return (
       <aside className="ant-layout-sider">
+        
         <div className="ant-layout-logo"></div>
         <Menu
-          mode="inline" theme="dark" openKeys={openKey}
+          mode="inline" theme="light" openKeys={openKey}
           onClick={this.menuClickHandle}
         >
           {menu}
