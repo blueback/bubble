@@ -35,10 +35,10 @@ public class HelloWorldController {
     @RequestMapping(value = "/login")
     public String login(HttpServletRequest request,HttpServletResponse response){
         System.out.println(user.getAddress());
-        response.setHeader("Access-Control-Allow-Origin", request.getHeader("Origin"));
-        response.setHeader("Access-Control-Allow-Credentials", "true");
-        response.setHeader("Access-Control-Allow-Headers", "*");
-        response.setHeader("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, OPTIONS");
+//        response.setHeader("Access-Control-Allow-Origin", request.getHeader("Origin"));
+//        response.setHeader("Access-Control-Allow-Credentials", "true");
+//        response.setHeader("Access-Control-Allow-Headers", "*");
+//        response.setHeader("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, OPTIONS");
         return "{\"user\":\"Hello\", \"role\": \"ADMIN\", \"uid\": 1}";
     }
 
