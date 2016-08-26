@@ -39,7 +39,7 @@ import java.util.stream.Collectors;
 @EnableAutoConfiguration
 public class WebApplication {
     @Bean
-    FilterRegistrationBean corsFilter(@Value("${tagit.origin:http://127.0.0.1:3000}") String origin) {
+    FilterRegistrationBean corsFilter(final @Value("${tagit.origin:http://127.0.0.1:3000}") String origin) {
         return new FilterRegistrationBean(new Filter() {
             public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain)
                     throws IOException, ServletException {
