@@ -3,7 +3,6 @@ import { bindActionCreators } from 'redux'
 import { Breadcrumb } from 'antd'
 import { connect } from 'react-redux'
 
-import './index.less'
 
 const defaultProps = {
   navpath: []
@@ -26,12 +25,14 @@ class NavPath extends React.Component {
       )
     })
     return (
-      <div className="ant-layout-breadcrumb">
-        <Breadcrumb>
-          <Breadcrumb.Item key='bc-0'>首页</Breadcrumb.Item>
-          {bread}
-        </Breadcrumb>
-      </div>
+      //<div class="ant-col-xs-24 ant-col-sm-24 ant-col-md-6 ant-col-lg-4">
+        <div className="ant-layout-breadcrumb">
+          <Breadcrumb>
+            <Breadcrumb.Item key='bc-0'>首页</Breadcrumb.Item>
+            {bread}
+          </Breadcrumb>
+        </div>
+      //</div>
     )
   }
 }

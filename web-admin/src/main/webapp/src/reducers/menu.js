@@ -15,7 +15,7 @@ const initialState = {
 export default function menu(state = initialState, action = {}) {
   switch (action.type) {
     case GET_ALL_MENU_SUCCESS:
-      return Object.assign({}, initialState, {items: action.payload.menus});
+      return Object.assign({}, initialState, {items: action.payload.data});
     case UPDATE_NAVPATH:
       let navpath = [], tmpOb, tmpKey, child;
       if(action.payload.data){
@@ -25,7 +25,7 @@ export default function menu(state = initialState, action = {}) {
             tmpOb = _.find(state.items, function(o) {
               return o.key == tmpKey;
             });
-            child = tmpOb.child;
+            child = tmpOb.subSysMenus;
             navpath.push({
               key: tmpOb.key,
               name: tmpOb.name

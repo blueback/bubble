@@ -26,19 +26,40 @@ class App extends React.Component {
     const {user, actions} = this.props;
 
     return (
-      <div className="ant-layout-aside">
-        <Sidebar />
-        <div className="ant-layout-main">
+      <div id="react-content">
+        <div  className="page-wrapper">
           <Header user={user} />
-          <NavPath />
-          <div className="ant-layout-container">
-            <div className="ant-layout-content">
-              {this.props.children}
+        </div>
+        <div className="main-wrapper">
+          <div className="ant-row">
+            <div className="ant-col-xs-24 ant-col-sm-24 ant-col-md-6 ant-col-lg-4">
+              <Sidebar />
+            </div>
+            <div className="main-container ant-col-xs-24 ant-col-sm-24 ant-col-md-18 ant-col-lg-20">
+              <article>
+                <section className="markdown">
+                  <NavPath />
+                  {this.props.children}
+                </section>
+              </article>
             </div>
           </div>
-          <Footer />
         </div>
       </div>
+
+      //<div className="ant-layout-aside">
+      //  <Sidebar />
+      //  <div className="ant-layout-main">
+      //    <Header user={user} />
+      //    <NavPath />
+      //    <div className="ant-layout-container">
+      //      <div className="ant-layout-content">
+      //        {this.props.children}
+      //      </div>
+      //    </div>
+      //    <Footer />
+      //  </div>
+      //</div>
     );
   }
 }

@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
  * Created by justin on 16/8/23.
  */
 @RestController
-@RequestMapping("/springboot")
+@RequestMapping("/admin")
 public class HelloWorldController {
 
     @Autowired
